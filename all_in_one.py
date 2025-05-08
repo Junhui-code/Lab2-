@@ -15,14 +15,10 @@ def calc_average(temperatures):
     return average
     
 def find_min_max(temperature):
-    min = temperature[0]
-    max = temperature[0]
-    for temp in temperature:
-        if temp < min:
-            min = temp
-        if temp > max:
-            max = temp
-    return min, max
+    mi = min(temperature)
+    ma = max(temperature)
+    return mi, ma
+
 
 def sort_temperature(tempera):
     tempera.sort()
@@ -52,5 +48,3 @@ print("\nMinimum temperature:", min)
 print("\nMaximum temperature:", max)
 print("\nMedian temperature:", median)
 print("\nAverage temperature:", average)
-
-

@@ -5,7 +5,13 @@ def calculate_bmi(weight, height):
     print("Height =  ",height)
     print("Weight =  ",weight)
     bmi = weight / (height ** 2)
-    return bmi
+
+    if bmi < 18.5:
+        return -1
+    elif bmi >= 18.5 and bmi <= 24.9:
+        return 0
+    elif bmi >= 25:
+        return 1
 
 Weight = float(input("Enter your weight in kilograms: "))
 Height = float(input("Enter your height in meters: "))
